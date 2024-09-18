@@ -18,14 +18,71 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="70dp" />
     <TextView
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
         android:text="Регистрация"
         android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dobropojalovat"/>
+        app:layout_constraintTop_toBottomOf="@id/dobropojalovat"
+        android:layout_marginTop = "50dp"/>
+    <TextView
+        android:id="@+id/ponomeru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="По номеру"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register"
+        app:layout_constraintRight_toLeftOf="@id/poemail"
+        android:layout_marginTop = "20dp"/>
+    <TextView
+        android:id="@+id/poemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="По email"
+        app:layout_constraintLeft_toRightOf="@id/ponomeru"
+        app:layout_constraintTop_toBottomOf="@id/register"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop = "20dp"
+        android:textColor="#8b00ff"/>
+    <EditText
+        android:id="@+id/enteremail"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите email"
+        app:layout_constraintTop_toBottomOf="@id/register"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop = "50dp"/>
+    <EditText
+        android:id="@+id/enterparol"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите пароль"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enteremail"/>
+    <EditText
+        android:id="@+id/repeatparol"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:hint="Повторите пароль"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterparol"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Зарегистрироваться"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repeatparol"
+        android:layout_marginTop = "50dp"/>
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
