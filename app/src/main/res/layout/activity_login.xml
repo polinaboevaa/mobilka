@@ -7,6 +7,12 @@
     tools:context=".MainActivity"
     tools:ignore="MissingDefaultResource">
 
+    <ImageView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/image1"/>
+
     <TextView
         android:id="@+id/dobropojalovat"
         android:layout_width="wrap_content"
@@ -16,7 +22,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="70dp" />
+        android:layout_marginTop="70dp"
+        android:textColor="#ffaf7a"/>
     <TextView
         android:id="@+id/enter"
         android:layout_width="wrap_content"
@@ -26,37 +33,57 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dobropojalovat"
-        android:layout_marginTop = "50dp"/>
-    <EditText
-        android:id="@+id/enteremail"
+        android:layout_marginTop = "50dp"
+        android:textColor="#ffaf7a"/>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Введите email/пароль"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        android:layout_weight="1"
         app:layout_constraintTop_toBottomOf="@id/enter"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop = "50dp"/>
-    <EditText
-        android:id="@+id/enterparol"
-        android:layout_width="195dp"
-        android:layout_height="wrap_content"
-        android:hint="Введите пароль"
-        app:layout_constraintTop_toBottomOf="@id/enteremail"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-    <CheckBox
-        android:id="@+id/checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Входить автоматически"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/enterparol"/>
+        app:layout_constraintRight_toRightOf="parent">
+
+        <EditText
+            android:id="@+id/enteremail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:hint="Введите email/пароль"
+            android:textColorHint="#ff9147"
+            android:backgroundTint = "#ff9147"/>
+
+        <EditText
+            android:id="@+id/enterparol"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Введите пароль"
+            android:textColorHint="#ff9147"
+            android:backgroundTint = "#ff9147"/>
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Входить автоматически"
+            android:textColor="#ff9147"
+            android:buttonTint="#ff9147"
+            />
+    </LinearLayout>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Войти"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox" />
+        app:layout_constraintTop_toBottomOf="@id/enter"
+        android:layout_marginTop="250dp"
+        android:backgroundTint = "#fcb4d5"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
